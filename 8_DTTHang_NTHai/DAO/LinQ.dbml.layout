@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="LinQ">
+  <DataContextMoniker Name="/LinQDataContext" />
+  <nestedChildShapes>
+    <classShape Id="5dcdae9d-3461-4277-bf3d-9a29d114b57c" absoluteBounds="0.75, 4.75, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/LinQDataContext/dangnhap" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1757fcdf-5d76-4e58-a5dd-825773bc4ced" absoluteBounds="0.765, 5.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d0892e9f-f1de-4b84-a18b-f679f06d0c19" absoluteBounds="0.75, 1.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/LinQDataContext/nhacungcap" />
+      <nestedChildShapes>
+        <elementListCompartment Id="046a60a0-a0d9-4546-b327-9331e1f94324" absoluteBounds="0.765, 1.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1e0bbaf4-2134-4024-a137-45e37add717b" absoluteBounds="3.5, 0.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/LinQDataContext/sanpham" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f012a473-8645-4df4-8ee2-a350fea62758" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 2.03929768880208); (3.5 : 2.03929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinQDataContext/nhacungcap/nhacungcap_sanpham" />
+      <nodes>
+        <classShapeMoniker Id="d0892e9f-f1de-4b84-a18b-f679f06d0c19" />
+        <classShapeMoniker Id="1e0bbaf4-2134-4024-a137-45e37add717b" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

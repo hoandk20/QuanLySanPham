@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="qlsp_8_DTTHangNTHai" Class="LinQDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=HOANDK;Initial Catalog=qlsp_8_DTTHangNTHai;Integrated Security=True" SettingsObjectName="_8_DTTHang_NTHai.Properties.Settings" SettingsPropertyName="qlsp_8_DTTHangNTHaiConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.dangnhap" Member="dangnhaps">
+    <Type Name="dangnhap">
+      <Column Name="username" Type="System.String" DbType="NVarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="fullname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="mod" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="state" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.nhacungcap" Member="nhacungcaps">
+    <Type Name="nhacungcap">
+      <Column Name="manhacc" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tennhacc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="emailnhacc" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="dienthoai" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Association Name="nhacungcap_sanpham" Member="sanphams" ThisKey="manhacc" OtherKey="manhacc" Type="sanpham" />
+    </Type>
+  </Table>
+  <Table Name="dbo.sanpham" Member="sanphams">
+    <Type Name="sanpham">
+      <Column Name="masp" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tensp" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="soluong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="dongia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="thanhtien" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="hangsp" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="manhacc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="nhacungcap_sanpham" Member="nhacungcap" ThisKey="manhacc" OtherKey="manhacc" Type="nhacungcap" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
